@@ -8,5 +8,6 @@ Core skills are authored in `.claude/` as the current industry standard. Until I
 
 - **Claude Code**: Skills work natively from `.claude/skills/`
 - **Cursor**: Run "sync skills" to copy to `.cursor/skills/` and generate `AGENTS.md`
+- **GitHub Copilot**: Use `.github/copilot-instructions.md` with a dictionary referencing `.claude/skills/` paths
 
 See `AGENTS.md` for an overview of available skills after syncing.
