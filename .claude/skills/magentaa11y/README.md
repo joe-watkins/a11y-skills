@@ -4,23 +4,15 @@ Accessibility acceptance criteria reference powered by [MagentaA11y](https://www
 
 ## Setup
 
-This skill uses the MagentaA11y project as a git submodule. 
+This skill clones the MagentaA11y repository on first use.
 
-**The skill will automatically initialize the submodule** if it detects the `repo/` folder is missing when you first use it.
+**The skill will automatically run setup** if it detects the `repo/` folder is missing.
 
 ### Manual Setup (optional)
-
-If you prefer to set up manually:
 
 ```bash
 cd .cursor/skills/magentaa11y
 ./setup.sh
-```
-
-Or from your project root:
-
-```bash
-git submodule update --init --recursive
 ```
 
 ### Updating Content
@@ -28,7 +20,7 @@ git submodule update --init --recursive
 To pull the latest MagentaA11y documentation:
 
 ```bash
-git submodule update --remote .cursor/skills/magentaa11y/repo
+cd .cursor/skills/magentaa11y/repo && git pull
 ```
 
 ## What This Skill Does
@@ -47,7 +39,7 @@ magentaa11y/
 ├── README.md          # This file
 ├── SKILL.md           # Skill definition (read by AI)
 ├── setup.sh           # Submodule setup script
-└── repo/              # Git submodule (MagentaA11y project)
+└── repo/              # Cloned MagentaA11y repository
     └── public/content/documentation/
         ├── how-to-test/type/    # Testing guidance
         ├── native/              # iOS/Android components

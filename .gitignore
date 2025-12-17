@@ -1,0 +1,4 @@
+
+# Cloned skill repositories
+.cursor/skills/*/repo/
+.claude/skills/*/repo/

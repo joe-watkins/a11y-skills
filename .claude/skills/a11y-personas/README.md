@@ -8,9 +8,9 @@ Library of 60+ accessibility personas for understanding diverse user needs, powe
 
 ## Setup
 
-This skill uses the a11y-personas repository as a git submodule.
+This skill clones the a11y-personas repository on first use.
 
-**The skill will automatically initialize the submodule** if it detects the `repo/` folder is missing when you first use it.
+**The skill will automatically run setup** if it detects the `repo/` folder is missing.
 
 ### Manual Setup (optional)
 
@@ -19,18 +19,12 @@ cd .cursor/skills/a11y-personas
 ./setup.sh
 ```
 
-Or from your project root:
-
-```bash
-git submodule update --init --recursive
-```
-
 ### Updating Content
 
 To pull the latest personas:
 
 ```bash
-git submodule update --remote .cursor/skills/a11y-personas/repo
+cd .cursor/skills/a11y-personas/repo && git pull
 ```
 
 ## What This Skill Does
@@ -49,7 +43,7 @@ a11y-personas/
 ├── README.md          # This file
 ├── SKILL.md           # Skill definition (read by AI)
 ├── setup.sh           # Submodule setup script
-└── repo/              # Git submodule
+└── repo/              # Cloned a11y-personas repository
     └── data/personas/
         ├── blindness-screen-reader-nvda.md
         ├── deafness-sign-language-user.md

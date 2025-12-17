@@ -4,23 +4,15 @@ Expert knowledge of WCAG 2.2 (Web Content Accessibility Guidelines) powered by t
 
 ## Setup
 
-This skill uses the official W3C WCAG repository as a git submodule.
+This skill clones the official W3C WCAG repository on first use.
 
-**The skill will automatically initialize the submodule** if it detects the `repo/` folder is missing when you first use it.
+**The skill will automatically run setup** if it detects the `repo/` folder is missing.
 
 ### Manual Setup (optional)
-
-If you prefer to set up manually:
 
 ```bash
 cd .cursor/skills/wcag-expert
 ./setup.sh
-```
-
-Or from your project root:
-
-```bash
-git submodule update --init --recursive
 ```
 
 ### Updating Content
@@ -28,7 +20,7 @@ git submodule update --init --recursive
 To pull the latest WCAG documentation:
 
 ```bash
-git submodule update --remote .cursor/skills/wcag-expert/repo
+cd .cursor/skills/wcag-expert/repo && git pull
 ```
 
 ## What This Skill Does
@@ -48,7 +40,7 @@ wcag-expert/
 ├── README.md          # This file
 ├── SKILL.md           # Skill definition (read by AI)
 ├── setup.sh           # Submodule setup script
-└── repo/              # Git submodule (W3C WCAG repository)
+└── repo/              # Cloned W3C WCAG repository
     ├── understanding/
     │   ├── 20/        # WCAG 2.0 Understanding docs
     │   ├── 21/        # WCAG 2.1 Understanding docs

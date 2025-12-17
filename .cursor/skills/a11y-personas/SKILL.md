@@ -7,25 +7,22 @@ description: Library of accessibility personas representing people with various 
 
 Library of accessibility personas for understanding diverse user needs.
 
-## Auto-Initialize Submodule
+## Auto-Initialize
 
-**Before reading any persona files**, check if the `repo/` folder exists in this skill directory. If it doesn't exist or is empty, run the setup script:
+**Before reading any persona files**, check if the `repo/` folder exists in this skill directory. If it doesn't exist, run the setup script:
 
 ```bash
 cd .cursor/skills/a11y-personas && ./setup.sh
 ```
 
-This clones the a11y-personas repository as a git submodule. Only needs to run once.
+This clones the a11y-personas repository. Only needs to run once.
 
-## Manual Setup (for reference)
+## Updating Content
+
+To pull the latest personas:
 
 ```bash
-# Initialize submodule
-cd .cursor/skills/a11y-personas
-git submodule add https://github.com/joe-watkins/a11y-personas.git repo
-
-# Update to latest
-git submodule update --remote repo
+cd .cursor/skills/a11y-personas/repo && git pull
 ```
 
 ## Data Source

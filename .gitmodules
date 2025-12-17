@@ -1,9 +1,0 @@
-[submodule ".cursor/skills/magentaa11y/repo"]
-	path = .cursor/skills/magentaa11y/repo
-	url = https://github.com/tmobile/magentaA11y.git
-[submodule ".cursor/skills/wcag-expert/repo"]
-	path = .cursor/skills/wcag-expert/repo
-	url = https://github.com/w3c/wcag.git
-[submodule ".cursor/skills/a11y-personas/repo"]
-	path = .cursor/skills/a11y-personas/repo
-	url = https://github.com/joe-watkins/a11y-personas.git

@@ -8,25 +8,22 @@ license: W3C Document License
 
 Expert resource for WCAG 2.2 (Web Content Accessibility Guidelines) questions and implementation guidance.
 
-## Auto-Initialize Submodule
+## Auto-Initialize
 
-**Before reading any WCAG files**, check if the `repo/` folder exists in this skill directory. If it doesn't exist or is empty, run the setup script:
+**Before reading any WCAG files**, check if the `repo/` folder exists in this skill directory. If it doesn't exist, run the setup script:
 
 ```bash
 cd .cursor/skills/wcag-expert && ./setup.sh
 ```
 
-This clones the official W3C WCAG repository as a git submodule. Only needs to run once.
+This clones the official W3C WCAG repository. Only needs to run once.
 
-## Manual Setup (for reference)
+## Updating Content
+
+To pull the latest WCAG documentation:
 
 ```bash
-# Initialize submodule
-cd .cursor/skills/wcag-expert
-git submodule add https://github.com/w3c/wcag.git repo
-
-# Update to latest
-git submodule update --remote repo
+cd .cursor/skills/wcag-expert/repo && git pull
 ```
 
 ## Data Source
