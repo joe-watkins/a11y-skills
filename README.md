@@ -36,6 +36,7 @@ See `AGENTS.md` for a complete list of skills after syncing, or browse `.claude/
 |-------|---------|
 | a11y-personas | Accessibility personas for diverse user needs |
 | a11y-tester | Automated WCAG testing with axe-core |
+| aria-expert | WAI-ARIA roles, states, properties, and API mappings |
 | magentaa11y | Component accessibility acceptance criteria |
 | skill-creator | Guide for creating new skills |
 | wcag-expert | WCAG 2.2 guidelines reference |
