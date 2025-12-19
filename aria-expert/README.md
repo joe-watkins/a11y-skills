@@ -11,7 +11,6 @@ This skill clones the official W3C ARIA repository on first use.
 ### Manual Setup (optional)
 
 ```bash
-cd .cursor/skills/aria-expert
 ./setup.sh
 ```
 
@@ -20,7 +19,7 @@ cd .cursor/skills/aria-expert
 To pull the latest ARIA specifications:
 
 ```bash
-cd .cursor/skills/aria-expert/repo && git pull
+cd repo && git pull
 ```
 
 ## What This Skill Does

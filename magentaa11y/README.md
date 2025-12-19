@@ -11,7 +11,6 @@ This skill clones the MagentaA11y repository on first use.
 ### Manual Setup (optional)
 
 ```bash
-cd .cursor/skills/magentaa11y
 ./setup.sh
 ```
 
@@ -20,7 +19,7 @@ cd .cursor/skills/magentaa11y
 To pull the latest MagentaA11y documentation:
 
 ```bash
-cd .cursor/skills/magentaa11y/repo && git pull
+cd repo && git pull
 ```
 
 ## What This Skill Does

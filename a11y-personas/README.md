@@ -15,7 +15,6 @@ This skill clones the a11y-personas repository on first use.
 ### Manual Setup (optional)
 
 ```bash
-cd .cursor/skills/a11y-personas
 ./setup.sh
 ```
 
@@ -24,7 +23,7 @@ cd .cursor/skills/a11y-personas
 To pull the latest personas:
 
 ```bash
-cd .cursor/skills/a11y-personas/repo && git pull
+cd repo && git pull
 ```
 
 ## What This Skill Does

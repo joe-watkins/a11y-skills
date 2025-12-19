@@ -11,7 +11,6 @@ This skill clones the official W3C WCAG repository on first use.
 ### Manual Setup (optional)
 
 ```bash
-cd .cursor/skills/wcag-expert
 ./setup.sh
 ```
 
@@ -20,7 +19,7 @@ cd .cursor/skills/wcag-expert
 To pull the latest WCAG documentation:
 
 ```bash
-cd .cursor/skills/wcag-expert/repo && git pull
+cd repo && git pull
 ```
 
 ## What This Skill Does
