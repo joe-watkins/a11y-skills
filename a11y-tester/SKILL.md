@@ -7,29 +7,40 @@ description: Run automated accessibility tests on URLs or HTML content using axe
 
 Run automated accessibility testing and format findings as standardized issue reports.
 
-## Prerequisites: Playwright Installation
+## Prerequisites: Playwright MCP Setup
 
-Before running accessibility tests, verify Playwright is installed. The axe-core testing tools require Playwright to interact with web pages.
+Before running accessibility tests, you need the Playwright MCP (Model Context Protocol) server configured in VS Code. This provides the browser automation tools needed to test web pages.
 
-### Check and Install Playwright
+### Initial Setup (First-Time Users)
 
-1. **Check if Playwright is installed**: Run `npx playwright --version` in the terminal
-2. **If not installed**: Run these commands in the working directory:
-   ```bash
-   npm init -y  # Only if no package.json exists
-   npm install playwright
-   npx playwright install
-   ```
+If you don't have Playwright MCP set up, follow these steps:
 
-### Quick Install Command
+1. **Install the Playwright extension** (if not already installed):
+   - Open Command Palette (`Cmd+Shift+P` / `Ctrl+Shift+P`)
+   - Search for and run: **Extensions: Install Extensions**
+   - Search for "Playwright" and install the official extension
 
-If Playwright is not detected, install it with:
+2. **Add the Playwright MCP server**:
+   - Open Command Palette (`Cmd+Shift+P` / `Ctrl+Shift+P`)
+   - Run: **MCP: Browse MCP Servers**
+   - Search for "Playwright" and add it
+   
+   **OR** manually add via:
+   - Run: **MCP: Add Server...**
+   - Follow prompts to add Playwright MCP
 
-```bash
-npm install playwright && npx playwright install
-```
+3. **Verify MCP access** (if needed):
+   - Ensure **chat.mcp.access** setting allows MCP server access
+   - Ensure **chat.mcp.autostart** is enabled for automatic startup
 
-This installs the Playwright npm package and downloads the browser binaries needed for testing.
+### Quick Check
+
+To verify Playwright MCP is available, look for these tools in your chat context:
+- `mcp_playwright_browser_navigate`
+- `mcp_playwright_browser_evaluate`
+- `mcp_playwright_browser_snapshot`
+
+If these tools are not available, you need to complete the setup above.
 
 ## Testing Workflow
 
