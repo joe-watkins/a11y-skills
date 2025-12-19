@@ -9,8 +9,8 @@ cd "$SCRIPT_DIR"
 ARIA_SPEC_URL="https://github.com/w3c/aria.git"
 APG_URL="https://github.com/w3c/aria-practices.git"
 
-ARIA_DIR="repo/aria"
-APG_DIR="repo/apg"
+ARIA_DIR="repo/aria-spec"
+APG_DIR="repo/apg-repo"
 
 echo "🔧 Setting up W3C ARIA repositories..."
 
@@ -41,9 +41,9 @@ fi
 
 echo "✅ ARIA Expert skill setup complete!"
 echo "📂 Content available at:"
-echo "   - Main ARIA spec: repo/aria/index.html"
-echo "   - Accessible Name spec: repo/aria/accname/index.html"
-echo "   - Core AAM: repo/aria/core-aam/index.html"
-echo "   - HTML AAM: repo/aria/html-aam/index.html"
-echo "   - APG Patterns: repo/apg/content/patterns/"
-echo "   - 5 Rules of ARIA: See SKILL.md"
+echo "   - Main ARIA spec: repo/aria-spec/index.html"
+echo "   - Accessible Name spec: repo/aria-spec/accname/index.html"
+echo "   - Core AAM: repo/aria-spec/core-aam/index.html"
+echo "   - HTML AAM: repo/aria-spec/html-aam/index.html"
+echo "   - APG Patterns: repo/apg-repo/content/patterns/"
+echo "   - 5 Rules of ARIA: repo/apg-repo/content/practices/read-me-first/"

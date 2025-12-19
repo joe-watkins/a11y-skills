@@ -10,7 +10,7 @@ Expert resource for WAI-ARIA (Accessible Rich Internet Applications) specificati
 
 ## Auto-Initialize
 
-**Before reading any ARIA files**, check if the `repo/aria/` and `repo/apg/` folders exist in this skill directory. If they don't exist, run the setup script:
+**Before reading any ARIA files**, check if the `repo/aria-spec/` and `repo/apg-repo/` folders exist in this skill directory. If they don't exist, run the setup script:
 
 ```bash
 cd .cursor/skills/aria-expert && ./setup.sh
@@ -23,8 +23,8 @@ This clones the official W3C ARIA repository and the ARIA Authoring Practices Gu
 To pull the latest ARIA specifications:
 
 ```bash
-cd .cursor/skills/aria-expert/repo/aria && git pull
-cd .cursor/skills/aria-expert/repo/apg && git pull
+cd .cursor/skills/aria-expert/repo/aria-spec && git pull
+cd .cursor/skills/aria-expert/repo/apg-repo && git pull
 ```
 
 ## Data Source
@@ -35,8 +35,8 @@ This skill uses the **official W3C ARIA repository** and **ARIA Authoring Practi
 
 | Path | Content |
 |------|---------||
-| `apg-repo/` | ARIA Authoring Practices Guide |
-| `apg-repo/content/patterns/` | Design patterns for common widgets |
+| `repo/apg-repo/` | ARIA Authoring Practices Guide |
+| `repo/apg-repo/content/patterns/` | Design patterns for common widgets |
 
 **Key content in APG:**
 - **5 Rules of ARIA Use** - Fundamental principles (see section below)
@@ -52,7 +52,7 @@ This skill uses the **official W3C ARIA repository** and **ARIA Authoring Practi
 
 | Path | Content |
 |------|---------|
-| `repo/index.html` | Main ARIA 1.3 specification - roles, states, properties |
+| `repo/aria-spec/index.html` | Main ARIA 1.3 specification - roles, states, properties |
 
 **Key content in index.html:**
 - All ARIA roles (button, link, tab, tabpanel, dialog, menu, etc.)
@@ -66,7 +66,7 @@ This skill uses the **official W3C ARIA repository** and **ARIA Authoring Practi
 
 | Path | Content |
 |------|---------|
-| `repo/accname/index.html` | Accessible Name and Description Computation specification |
+| `repo/aria-spec/accname/index.html` | Accessible Name and Description Computation specification |
 
 **Key content in accname:**
 - How browsers compute accessible names
@@ -79,8 +79,8 @@ This skill uses the **official W3C ARIA repository** and **ARIA Authoring Practi
 
 | Path | Content |
 |------|---------|
-| `repo/core-aam/index.html` | Core Accessibility API Mappings - how ARIA maps to platform APIs |
-| `repo/html-aam/index.html` | HTML Accessibility API Mappings - HTML element mappings |
+| `repo/aria-spec/core-aam/index.html` | Core Accessibility API Mappings - how ARIA maps to platform APIs |
+| `repo/aria-spec/html-aam/index.html` | HTML Accessibility API Mappings - HTML element mappings |
 
 **Key content in AAM specs:**
 - How ARIA roles map to platform accessibility APIs (MSAA, UIA, ATK, AX API)
@@ -92,25 +92,25 @@ This skill uses the **official W3C ARIA repository** and **ARIA Authoring Practi
 
 | Path | Content |
 |------|---------|
-| `repo/dpub-aria/index.html` | Digital Publishing ARIA - roles for digital publications |
-| `repo/dpub-aam/index.html` | Digital Publishing AAM - mappings for dpub roles |
-| `repo/graphics-aria/index.html` | Graphics ARIA - roles for graphics and diagrams |
-| `repo/graphics-aam/index.html` | Graphics AAM - mappings for graphics roles |
+| `repo/aria-spec/dpub-aria/index.html` | Digital Publishing ARIA - roles for digital publications |
+| `repo/aria-spec/dpub-aam/index.html` | Digital Publishing AAM - mappings for dpub roles |
+| `repo/aria-spec/graphics-aria/index.html` | Graphics ARIA - roles for graphics and diagrams |
+| `repo/aria-spec/graphics-aam/index.html` | Graphics AAM - mappings for graphics roles |
 
 ### Format-Specific Mappings
 
 | Path | Content |
 |------|---------|
-| `repo/svg-aam/index.html` | SVG Accessibility API Mappings |
-| `repo/mathml-aam/index.html` | MathML Accessibility API Mappings |
-| `repo/pdf-aam/index.html` | PDF Accessibility API Mappings |
+| `repo/aria-spec/svg-aam/index.html` | SVG Accessibility API Mappings |
+| `repo/aria-spec/mathml-aam/index.html` | MathML Accessibility API Mappings |
+| `repo/aria-spec/pdf-aam/index.html` | PDF Accessibility API Mappings |
 
 ### Documentation
 
 | Path | Content |
 |------|---------|
-| `repo/README.md` | Repository overview and contribution guidelines |
-| `repo/CONTRIBUTING.md` | How to contribute to ARIA specifications |
+| `repo/aria-spec/README.md` | Repository overview and contribution guidelines |
+| `repo/aria-spec/CONTRIBUTING.md` | How to contribute to ARIA specifications |
 
 ## How to Answer ARIA Questions
 
@@ -120,7 +120,7 @@ This skill uses the **official W3C ARIA repository** and **ARIA Authoring Practi
 
 ### For Design Pattern Questions (e.g., "How to build a tabs widget?", "Dialog keyboard interaction")
 
-1. Read the appropriate pattern file in `repo/apg/content/patterns/`
+1. Read the appropriate pattern file in `repo/apg-repo/content/patterns/`
 2. Common patterns:
    - `accordion/` - Accordion pattern
    - `alert/` - Alert pattern  
@@ -136,7 +136,7 @@ This skill uses the **official W3C ARIA repository** and **ARIA Authoring Practi
 
 ### For Role Questions (e.g., "button role", "dialog role", "tablist")
 
-1. Read `repo/aria/index.html` and search for the role name
+1. Read `repo/aria-spec/index.html` and search for the role name
 2. The spec contains:
    - Role definition and purpose
    - Required/supported states and properties
@@ -147,7 +147,7 @@ This skill uses the **official W3C ARIA repository** and **ARIA Authoring Practi
 
 ### For State/Property Questions (e.g., "aria-label", "aria-expanded", "aria-live")
 
-1. Read `repo/aria/index.html` and search for the attribute name
+1. Read `repo/aria-spec/index.html` and search for the attribute name
 2. The spec contains:
    - Property definition
    - Valid values (true/false, token list, string, etc.)
@@ -157,7 +157,7 @@ This skill uses the **official W3C ARIA repository** and **ARIA Authoring Practi
 
 ### For Accessible Name Questions
 
-1. Read `repo/aria/accname/index.html`
+1. Read `repo/aria-spec/accname/index.html`
 2. Search for relevant sections:
    - Name calculation algorithm (step-by-step process)
    - Text alternative computation
@@ -166,19 +166,19 @@ This skill uses the **official W3C ARIA repository** and **ARIA Authoring Practi
 
 ### For API Mapping Questions
 
-1. For ARIA role/property mappings: Read `repo/aria/core-aam/index.html`
-2. For HTML element mappings: Read `repo/aria/html-aam/index.html`
+1. For ARIA role/property mappings: Read `repo/aria-spec/core-aam/index.html`
+2. For HTML element mappings: Read `repo/aria-spec/html-aam/index.html`
 3. Search for the specific role or element name
 4. The spec shows platform-specific mappings (Windows, macOS, Linux, etc.)
 
 ### For Digital Publishing Questions
 
-1. Read `repo/aria/dpub-aria/index.html`
+1. Read `repo/aria-spec/dpub-aria/index.html`
 2. Search for roles like: doc-abstract, doc-acknowledgments, doc-bibliography, doc-chapter, etc.
 
 ### For Graphics Questions
 
-1. Read `repo/aria/graphics-aria/index.html`
+1. Read `repo/aria-spec/graphics-aria/index.html`
 2. Search for roles like: graphics-document, graphics-symbol, graphics-object
 
 ## 5 Rules of ARIA Use
