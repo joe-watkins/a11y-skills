@@ -38,6 +38,9 @@ The easiest way to use these skills with your IDE is to use the deployment scrip
 # Deploy with automatic setup (downloads external resources)
 ./deploy-skills.sh --all --setup
 
+# Deploy with symlinks (for development - changes sync automatically)
+./deploy-skills.sh --all --symlink
+
 # List all available skills
 ./deploy-skills.sh --list
 
@@ -46,8 +49,8 @@ The easiest way to use these skills with your IDE is to use the deployment scrip
 ```
 
 The deployment script automatically:
-- Creates symlinks to skills in IDE-specific directories (`.claude/skills/`, `.cursor/skills/`, `.github/skills/`)
-- Keeps skills in sync with the source (changes are immediately reflected)
+- Copies skills to IDE-specific directories (`.claude/skills/`, `.cursor/skills/`, `.github/skills/`)
+- Ensures compatibility with all IDE implementations
 - Optionally runs setup scripts to download external reference data
 
 ### IDE-Specific Directories
@@ -58,7 +61,7 @@ After running the deployment script, skills will be available in:
 - **Cursor**: `.cursor/skills` directory
 - **GitHub Copilot**: `.github/skills/` directory
 
-> The deployment script uses symlinks by default, so any changes you make to the source skills are immediately reflected in all IDE locations. Use `--copy` flag if you prefer to copy files instead.
+> The deployment script copies files by default for maximum compatibility. Use `--symlink` flag if you prefer symlinks (changes to source skills are immediately reflected, but may not work with all IDEs).
 
 ### Manual Setup (Alternative)
 

@@ -4,4 +4,5 @@
 # Ignore IDE files for now for testing
 .github/
 .claude/
+.cursor/
 .cursorrules

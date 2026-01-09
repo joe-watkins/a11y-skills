@@ -22,8 +22,8 @@ CLAUDE_DIR=".claude/skills"
 CURSOR_DIR=".cursor/skills"
 GITHUB_DIR=".github/skills"
 
-# Deployment mode: symlink (default) or copy
-DEPLOY_MODE="symlink"
+# Deployment mode: copy (default) or symlink
+DEPLOY_MODE="copy"
 
 # IDEs to deploy to (default: all)
 DEPLOY_CLAUDE=false
@@ -47,7 +47,7 @@ OPTIONS:
     --cursor            Deploy to Cursor (.cursor/skills/)
     --github            Deploy to GitHub Copilot (.github/skills/)
 
-    --copy              Copy files instead of symlinking (default: symlink)
+    --symlink           Use symlinks instead of copying files (default: copy)
     --setup             Run setup.sh scripts for skills that have them
 
     --clean             Remove all IDE deployment directories
@@ -56,9 +56,9 @@ OPTIONS:
     -h, --help          Show this help message
 
 EXAMPLES:
-    ./deploy-skills.sh --all                    # Deploy to all IDEs (symlink)
+    ./deploy-skills.sh --all                    # Deploy to all IDEs (copy files)
     ./deploy-skills.sh --claude --setup         # Deploy to Claude with setup
-    ./deploy-skills.sh --cursor --copy          # Deploy to Cursor (copy files)
+    ./deploy-skills.sh --cursor --symlink       # Deploy to Cursor (use symlinks)
     ./deploy-skills.sh --clean                  # Remove all IDE directories
     ./deploy-skills.sh --list                   # List all skills
 
@@ -89,8 +89,8 @@ parse_args() {
                 DEPLOY_GITHUB=true
                 shift
                 ;;
-            --copy)
-                DEPLOY_MODE="copy"
+            --symlink)
+                DEPLOY_MODE="symlink"
                 shift
                 ;;
             --setup)
